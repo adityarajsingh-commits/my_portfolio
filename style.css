@@ -252,3 +252,47 @@ footer {
     opacity: 0;
   }
 }
+/* ===================================================
+   Spotlight Card Effect
+=================================================== */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(194, 94, 0, 0.12); /* Warm beige/amber glow */
+}
+
+[data-theme="dark"] .spotlight-card {
+  --spotlight-color: rgba(224, 122, 44, 0.18); /* Vibrant glow in dark mode */
+}
+
+/* Pseudo-element that creates the cursor-following radial light */
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    450px circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Reveal glow on hover */
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* Ensure card content stays above the glow layer */
+.spotlight-card > * {
+  position: relative;
+  z-index: 2;
+}
