@@ -83,3 +83,19 @@ function typeEffect() {
 
 // Start typing on page load
 document.addEventListener("DOMContentLoaded", typeEffect);
+
+// ===================================================
+// Interactive Spotlight Card Hover Effect
+// ===================================================
+const spotlightCards = document.querySelectorAll('.spotlight-card');
+
+spotlightCards.forEach((card) => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left; // X position within the card
+    const y = e.clientY - rect.top;  // Y position within the card
+
+    card.style.setProperty('--mouse-x', `${x}px`);
+    card.style.setProperty('--mouse-y', `${y}px`);
+  });
+});
