@@ -241,3 +241,64 @@ form.addEventListener('submit', async (e) => {
     btnText.textContent = originalText;
   }
 });
+// ===================================================
+// Formspree Submission Handler
+// ===================================================
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/maeyqqvr';
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const inputs = [form.name, form.email, form.message];
+  let isFormValid = true;
+
+  // Run real-time validation across all fields
+  inputs.forEach((input) => {
+    const valid = validateField(input);
+    if (!valid) isFormValid = false;
+  });
+
+  if (!isFormValid) {
+    showToast('Please correct the errors in the form.', 'error');
+    return;
+  }
+
+  // Set loading state
+  const btnText = submitBtn.querySelector('.btn-text');
+  const originalText = btnText.textContent;
+  submitBtn.disabled = true;
+  btnText.textContent = 'Sending...';
+
+  try {
+    const formData = new FormData(form);
+
+    const response = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      showToast('Message sent successfully! I will reply soon.', 'success');
+      form.reset();
+
+      // Reset success styling outlines
+      document.querySelectorAll('.form-group').forEach((group) => {
+        group.classList.remove('is-valid');
+      });
+    } else {
+      const data = await response.json();
+      const errorMessage = data.errors
+        ? data.errors.map((err) => err.message).join(', ')
+        : 'Submission failed. Please try again.';
+      showToast(errorMessage, 'error');
+    }
+  } catch (error) {
+    showToast('Network error. Please check your connection and try again.', 'error');
+  } finally {
+    submitBtn.disabled = false;
+    btnText.textContent = originalText;
+  }
+});
