@@ -233,3 +233,22 @@ footer {
   color: var(--text-muted);
   font-size: 0.9rem;
 }
+/* ===================================================
+   Typewriter & Cursor Styles
+=================================================== */
+.cursor {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 300;
+  margin-left: 2px;
+  animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
