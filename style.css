@@ -296,3 +296,30 @@ footer {
   position: relative;
   z-index: 2;
 }
+
+/* ===================================================
+   3D Tilt & Perspective Styles
+=================================================== */
+
+/* Add perspective to parent grids so cards rotate in 3D space */
+.skills-grid,
+.projects-grid {
+  perspective: 1000px;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.15s ease-out, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Smooth reset when the cursor leaves */
+.tilt-card.is-leaving {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Optional: create subtle depth by popping card content slightly forward */
+.tilt-card > * {
+  transform: translateZ(20px);
+  transform-style: preserve-3d;
+}
