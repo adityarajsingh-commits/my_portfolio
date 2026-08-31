@@ -3,18 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aditya Singh | Web Designer & Software Developer</title>
+  <title>Aditya Singh | Creative Developer & Designer</title>
+  <!-- Google Fonts for Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Ambient Background Glow Gradients -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Header & Navigation -->
   <header>
     <nav>
-      <div class="logo">Aditya<span>Singh</span></div>
+      <a href="#" class="logo">Aditya<span>.dev</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
@@ -24,87 +33,119 @@
   </header>
 
   <main class="container">
+    <!-- Hero Section -->
     <section id="hero">
-      <h1>Hi, I'm <span>Aditya Singh</span></h1>
-      <p>Web Designer & Software Developer specializing in crafting clean, responsive, dynamic web applications with modern HTML, CSS, and JavaScript.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <section id="about">
-      <h2 class="section-title">About Me</h2>
-      <p class="about-text">
-        I am a developer who bridges the gap between design and functional software code. 
-        Focusing on clean UI/UX architecture and cross-browser consistency, I turn layout concepts into accessible, responsive websites.
+      <div class="status-badge">
+        <span class="status-dot"></span> Available for new opportunities
+      </div>
+      <h1 class="hero-title">
+        Crafting <span class="gradient-text">exceptional</span> digital experiences & clean code.
+      </h1>
+      <p class="hero-subtext">
+        I'm <strong>Aditya Singh</strong>, a Software Developer & UI Designer building responsive, high-performance web applications with modern architecture.
       </p>
-    </section>
-
-    <section id="skills">
-      <h2 class="section-title">Core Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">HTML5 (Semantic)</div>
-        <div class="skill-card">CSS3 (Grid & Flexbox)</div>
-        <div class="skill-card">JavaScript (ES6+)</div>
-        <div class="skill-card">Responsive Design</div>
-        <div class="skill-card">UI/UX Prototyping</div>
-        <div class="skill-card">Git & GitHub</div>
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn btn-primary">Explore My Work <span>→</span></a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
       </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-card glass-panel">
+        <p>
+          I operate at the intersection of <strong>intuitive visual design</strong> and <strong>robust engineering</strong>. My approach focuses on fluid UX micro-interactions, responsive CSS architecture, and clean, performant JavaScript logic to turn layout ideas into memorable digital products.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="section-title">Technical Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-card glass-panel">
+          <span class="skill-icon">⚡</span>
+          <h4>Frontend Core</h4>
+          <p>HTML5 Semantic, CSS3 Grid/Flexbox, ES6+ JavaScript</p>
+        </div>
+        <div class="skill-card glass-panel">
+          <span class="skill-icon">🎨</span>
+          <h4>UI / UX Design</h4>
+          <p>Responsive Layouts, Design Systems, Glassmorphism, Micro-animations</p>
+        </div>
+        <div class="skill-card glass-panel">
+          <span class="skill-icon">🛠️</span>
+          <h4>Workflow & Logic</h4>
+          <p>DOM APIs, LocalStorage State, Git/GitHub, Clean Code Architecture</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects">
       <h2 class="section-title">Featured Projects</h2>
       <div class="projects-grid">
         
-        <div class="project-card">
-          <div>
-            <h3>Interactive Web App Showcase</h3>
-            <p>A personal showcase website featuring smooth scrolling, interactive UI elements, and layout optimization across modern devices.</p>
+        <div class="project-card glass-panel">
+          <div class="project-content">
+            <span class="project-type">Web Application</span>
+            <h3>Dynamic E-Commerce Interface</h3>
+            <p>A fast modular shopping experience powered by vanilla JavaScript DOM operations, live cart calculations, dynamic filters, and persistent state handling.</p>
             <div class="tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">JavaScript ES6</span>
+              <span class="tag">CSS Grid</span>
+              <span class="tag">State Management</span>
             </div>
           </div>
-          <a href="#" class="btn btn-card">View Project</a>
+          <a href="#" class="project-link">View Live Project ↗</a>
         </div>
 
-        <div class="project-card">
-          <div>
-            <h3>Dynamic E-Commerce Interface</h3>
-            <p>A fast UI product module using pure JavaScript DOM manipulation to manage cart updates, dynamic calculations, and gallery filters.</p>
+        <div class="project-card glass-panel">
+          <div class="project-content">
+            <span class="project-type">UI/UX Platform</span>
+            <h3>Interactive Showcase Hub</h3>
+            <p>A personal portfolio platform emphasizing smooth scroll behaviors, custom thematic palettes, responsive glassmorphism panels, and clean design tokens.</p>
             <div class="tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">CSS Grid</span>
-              <span class="tag">UI Design</span>
+              <span class="tag">Modern UI/UX</span>
+              <span class="tag">CSS Variables</span>
+              <span class="tag">Dark/Light Mode</span>
             </div>
           </div>
-          <a href="#" class="btn btn-card">View Project</a>
+          <a href="#" class="project-link">View Live Project ↗</a>
         </div>
 
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
-      <h2 class="section-title">Get In Touch</h2>
-      <form class="contact-form" id="contactForm">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" required placeholder="Your Name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required placeholder="your.email@example.com">
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" required placeholder="Your message..."></textarea>
-        </div>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+      <h2 class="section-title">Let's Build Something</h2>
+      <div class="contact-wrapper glass-panel">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required placeholder="Aditya Singh">
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" required placeholder="aditya@example.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Tell me about your project or idea..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message <span>↗</span></button>
+        </form>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Aditya Singh. Built with HTML, CSS, and JavaScript.</p>
+    <p>&copy; 2026 Aditya Singh. Designed with precision & warm aesthetics.</p>
   </footer>
 
   <script src="script.js"></script>
