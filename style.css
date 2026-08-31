@@ -425,3 +425,18 @@ footer {
   font-size: 1.2rem;
   flex-shrink: 0;
 }
+/* ===================================================
+   Anti-Spam Honeypot (Invisible to users & screen readers)
+=================================================== */
+.form-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
