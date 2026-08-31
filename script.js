@@ -361,3 +361,34 @@ form.addEventListener('submit', async (e) => {
     btnText.textContent = originalText;
   }
 });
+
+// ===================================================
+// Timeline Tab Switching & Dynamic Re-initialization
+// ===================================================
+const tabButtons = document.querySelectorAll('.timeline-tabs .tab-btn');
+const tabContents = document.querySelectorAll('.timeline-content');
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.getAttribute('data-tab');
+
+    // Update active tab buttons
+    tabButtons.forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+
+    // Display matching content panel
+    tabContents.forEach((panel) => {
+      if (panel.id === targetId) {
+        panel.classList.add('active');
+        panel.removeAttribute('hidden');
+      } else {
+        panel.classList.remove('active');
+        panel.setAttribute('hidden', 'true');
+      }
+    });
+  });
+});
