@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aditya Singh | Creative Developer & Designer</title>
-  <!-- Google Fonts for Modern Typography -->
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -24,6 +26,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Work</a></li>
+        <li><a href="#timeline">Timeline</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
@@ -34,27 +37,30 @@
 
   <main class="container">
     <!-- Hero Section -->
-<section id="hero">
-  <div class="status-badge">
-    <span class="status-dot"></span> Available for new opportunities
-  </div>
-  
-  <h1 class="hero-title">
-    Hi, I'm Aditya Singh.<br>
-    I build <span id="typewriter-text" class="gradient-text"></span><span class="cursor">|</span>
-  </h1>
-  
-  <p class="hero-subtext">
-    Specializing in crafting clean, responsive, dynamic web applications with modern HTML, CSS, and JavaScript.
-  </p>
-  <div class="hero-cta-group">
-    <a href="#projects" class="btn btn-primary">Explore My Work <span>→</span></a>
-    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-  </div>
-  <div class="hero-image-container">
+    <section id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="status-badge">
+            <span class="status-dot"></span> Available for new opportunities
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm Aditya Singh.<br>
+            I build <span id="typewriter-text" class="gradient-text"></span><span class="cursor">|</span>
+          </h1>
+          <p class="hero-subtext">
+            Specializing in crafting clean, responsive, dynamic web applications with modern HTML, CSS, and JavaScript.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">Explore My Work <span>→</span></a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image-container">
           <img src="profile.jpeg" alt="Aditya Singh Portrait" class="hero-profile-pic">
         </div>
-</section>
+      </div>
+    </section>
+
     <!-- About Section -->
     <section id="about">
       <h2 class="section-title">About Me</h2>
@@ -66,32 +72,32 @@
     </section>
 
     <!-- Skills Section -->
-<!-- Example on Skill Card -->
-<div class="skill-card glass-panel spotlight-card tilt-card">
-  <span class="skill-icon">⚡</span>
-  <h4>Frontend Core</h4>
-  <p>HTML5 Semantic, CSS3 Grid/Flexbox, ES6+ JavaScript</p>
-</div>
+    <section id="skills">
+      <h2 class="section-title">Core Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card glass-panel spotlight-card tilt-card">
+          <span class="skill-icon">⚡</span>
+          <h4>Frontend Core</h4>
+          <p>HTML5 Semantic, CSS3 Grid/Flexbox, ES6+ JavaScript</p>
+        </div>
+        <div class="skill-card glass-panel spotlight-card tilt-card">
+          <span class="skill-icon">🎨</span>
+          <h4>UI/UX Design</h4>
+          <p>Responsive Layouts, Glassmorphism, Theme Tokens</p>
+        </div>
+        <div class="skill-card glass-panel spotlight-card tilt-card">
+          <span class="skill-icon">🛠️</span>
+          <h4>Workflow & Tools</h4>
+          <p>Git, GitHub, VS Code, REST API Integration</p>
+        </div>
+      </div>
+    </section>
 
-<!-- Example on Project Card -->
-<div class="project-card glass-panel spotlight-card tilt-card">
-  <div class="project-content">
-    <span class="project-type">Web Application</span>
-    <h3>Dynamic E-Commerce Interface</h3>
-    <p>A fast modular shopping experience powered by vanilla JavaScript.</p>
-    <div class="tags">
-      <span class="tag">JavaScript ES6</span>
-      <span class="tag">CSS Grid</span>
-    </div>
-  </div>
-  <a href="#" class="project-link">View Live Project ↗</a>
-</div>
     <!-- Projects Section -->
     <section id="projects">
       <h2 class="section-title">Featured Projects</h2>
       <div class="projects-grid">
-        
-        <div class="project-card glass-panel">
+        <div class="project-card glass-panel spotlight-card tilt-card">
           <div class="project-content">
             <span class="project-type">Web Application</span>
             <h3>Dynamic E-Commerce Interface</h3>
@@ -105,7 +111,7 @@
           <a href="#" class="project-link">View Live Project ↗</a>
         </div>
 
-        <div class="project-card glass-panel">
+        <div class="project-card glass-panel spotlight-card tilt-card">
           <div class="project-content">
             <span class="project-type">UI/UX Platform</span>
             <h3>Interactive Showcase Hub</h3>
@@ -118,208 +124,122 @@
           </div>
           <a href="#" class="project-link">View Live Project ↗</a>
         </div>
-
       </div>
     </section>
-<!-- Experience & Education Section -->
-<section id="timeline">
-  <div class="timeline-header">
-    <div>
-      <span class="section-badge">Career Roadmap</span>
-      <h2 class="section-title">Experience & Education</h2>
-    </div>
-    
-    <!-- Tab Controls -->
-    <div class="timeline-tabs" role="tablist">
-      <button class="tab-btn active" role="tab" aria-selected="true" data-tab="experience">
-        💼 Experience
-      </button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="education">
-        🎓 Education
-      </button>
-    </div>
-  </div>
 
-  <!-- Experience Tab Content -->
-  <div class="timeline-content active" id="experience" role="tabpanel">
-    <div class="timeline-tree">
-      
-      <!-- Timeline Item 1 -->
-      <div class="timeline-item spotlight-card tilt-card glass-panel">
-        <div class="timeline-marker"></div>
-        <div class="timeline-body">
-          <div class="timeline-meta">
-            <span class="timeline-period">2024 — Present</span>
-            <span class="timeline-badge">Full-time</span>
-          </div>
-          <h3 class="timeline-role">Software Developer & UI Designer</h3>
-          <h4 class="timeline-org">Web Studio & Client Projects</h4>
-          <p class="timeline-desc">
-            Architected and deployed responsive client dashboards, dynamic e-commerce modules, and workflow automations with vanilla JavaScript and modern CSS.
-          </p>
-          <ul class="timeline-bullets">
-            <li>Engineered DOM-manipulation-heavy storefront interfaces, cutting checkout interaction latency by over 30%.</li>
-            <li>Built automated webhook workflows and lead processing pipelines using JSON API integrations.</li>
-            <li>Implemented strict accessibility (WCAG) compliance and cross-browser resilience across mobile and desktop.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">JavaScript (ES6+)</span>
-            <span class="tag">CSS Grid / Flexbox</span>
-            <span class="tag">API Integration</span>
-            <span class="tag">UI / UX</span>
+    <!-- Timeline / Career Section -->
+    <section id="timeline">
+      <div class="timeline-header">
+        <div>
+          <span class="section-badge">Career Roadmap</span>
+          <h2 class="section-title">Experience & Education</h2>
+        </div>
+        <div class="timeline-tabs" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="experience">💼 Experience</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="education">🎓 Education</button>
+        </div>
+      </div>
+
+      <!-- Experience Tab Content -->
+      <div class="timeline-content active" id="experience" role="tabpanel">
+        <div class="timeline-tree">
+          <div class="timeline-item spotlight-card tilt-card glass-panel">
+            <div class="timeline-marker"></div>
+            <div class="timeline-body">
+              <div class="timeline-meta">
+                <span class="timeline-period">2024 — Present</span>
+                <span class="timeline-badge">Full-time</span>
+              </div>
+              <h3 class="timeline-role">Software Developer & UI Designer</h3>
+              <h4 class="timeline-org">Web Studio & Client Projects</h4>
+              <p class="timeline-desc">Architected and deployed responsive client dashboards, dynamic e-commerce modules, and workflow automations.</p>
+              <ul class="timeline-bullets">
+                <li>Engineered DOM-manipulation-heavy storefront interfaces, cutting checkout interaction latency by over 30%.</li>
+                <li>Built automated webhook workflows and lead processing pipelines using JSON API integrations.</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">JavaScript (ES6+)</span>
+                <span class="tag">CSS Grid / Flexbox</span>
+                <span class="tag">API Integration</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Timeline Item 2 -->
-      <div class="timeline-item spotlight-card tilt-card glass-panel">
-        <div class="timeline-marker"></div>
-        <div class="timeline-body">
-          <div class="timeline-meta">
-            <span class="timeline-period">2023 — 2024</span>
-            <span class="timeline-badge">Contract</span>
-          </div>
-          <h3 class="timeline-role">Frontend Web Specialist</h3>
-          <h4 class="timeline-org">Freelance & Open Source</h4>
-          <p class="timeline-desc">
-            Delivered custom landing pages, component libraries, and interactive showcase prototypes for small businesses and creators.
-          </p>
-          <ul class="timeline-bullets">
-            <li>Designed and coded modular design systems with dynamic theme toggling (Dark/Beige).</li>
-            <li>Integrated client-side state handling and secure contact endpoints with Formspree and serverless APIs.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">HTML5 / Semantic</span>
-            <span class="tag">Responsive Architecture</span>
-            <span class="tag">Git & GitHub</span>
+      <!-- Education Tab Content -->
+      <div class="timeline-content" id="education" role="tabpanel" hidden>
+        <div class="timeline-tree">
+          <div class="timeline-item spotlight-card tilt-card glass-panel">
+            <div class="timeline-marker"></div>
+            <div class="timeline-body">
+              <div class="timeline-meta">
+                <span class="timeline-period">Graduate</span>
+                <span class="timeline-badge">Degree</span>
+              </div>
+              <h3 class="timeline-role">Bachelor of Technology (B.Tech)</h3>
+              <h4 class="timeline-org">Engineering & Technology</h4>
+              <p class="timeline-desc">Focused on core computer science foundations, algorithms, and distributed systems.</p>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-
-  <!-- Education Tab Content -->
-  <div class="timeline-content" id="education" role="tabpanel" hidden>
-    <div class="timeline-tree">
-      
-      <!-- Education Item 1 -->
-      <div class="timeline-item spotlight-card tilt-card glass-panel">
-        <div class="timeline-marker"></div>
-        <div class="timeline-body">
-          <div class="timeline-meta">
-            <span class="timeline-period">Graduate</span>
-            <span class="timeline-badge">Degree</span>
-          </div>
-          <h3 class="timeline-role">Bachelor of Technology (B.Tech)</h3>
-          <h4 class="timeline-org">Engineering & Technology</h4>
-          <p class="timeline-desc">
-            Focused on core computer science foundations, algorithms, object-oriented design patterns, and distributed systems.
-          </p>
-          <ul class="timeline-bullets">
-            <li>Coursework: Data Structures & Algorithms, Web Architecture, Database Systems, Software Engineering.</li>
-            <li>Led technical web development team for department projects and annual tech symposiums.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Data Structures</span>
-            <span class="tag">Software Engineering</span>
-            <span class="tag">System Design</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education Item 2 -->
-      <div class="timeline-item spotlight-card tilt-card glass-panel">
-        <div class="timeline-marker"></div>
-        <div class="timeline-body">
-          <div class="timeline-meta">
-            <span class="timeline-period">Continuous Learning</span>
-            <span class="timeline-badge">Certifications</span>
-          </div>
-          <h3 class="timeline-role">Modern Full-Stack & UI/UX Specialization</h3>
-          <h4 class="timeline-org">Independent Technical Training</h4>
-          <p class="timeline-desc">
-            Hands-on deep dives into modern JavaScript paradigms, asynchronous performance optimization, and Figma-to-code design translation.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
     <!-- Contact Section -->
-    <h2><center>Contact Us</center></h2>
-<form class="contact-form" id="contactForm" novalidate>
-  <!-- Formspree Anti-Spam Honeypot Field -->
-  
-  <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <section id="contact">
+      <h2 class="section-title text-center">Contact Us</h2>
+      <form class="contact-form" id="contactForm" novalidate>
+        <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-  <div class="form-row">
-    <!-- Name Field -->
-    <div class="form-group" id="group-name">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Aditya Singh" autocomplete="name">
-      <span class="error-msg" id="error-name" aria-live="polite"></span>
-    </div>
+        <div class="form-row">
+          <div class="form-group" id="group-name">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Aditya Singh" autocomplete="name">
+            <span class="error-msg" id="error-name" aria-live="polite"></span>
+          </div>
 
-    <!-- Email Field -->
-    <div class="form-group" id="group-email">
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="aditya@example.com" autocomplete="email">
-      <span class="error-msg" id="error-email" aria-live="polite"></span>
-    </div>
-  </div>
+          <div class="form-group" id="group-email">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="aditya@example.com" autocomplete="email">
+            <span class="error-msg" id="error-email" aria-live="polite"></span>
+          </div>
+        </div>
 
-  <!-- Message Field -->
-  <div class="form-group" id="group-message">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..."></textarea>
-    <span class="error-msg" id="error-message" aria-live="polite"></span>
-  </div>
+        <div class="form-group" id="group-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..."></textarea>
+          <span class="error-msg" id="error-message" aria-live="polite"></span>
+        </div>
 
-  <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
-    <span class="btn-text">Send Message</span>
-    <span class="btn-icon">↗</span>
-  </button>
-</form>
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-icon">↗</span>
+        </button>
+      </form>
+    </section>
   </main>
-<!-- Command Palette Trigger Hint in Header (Optional addition inside <nav>) -->
-<!-- <button class="cmd-k-trigger" id="cmdTrigger" aria-label="Open Command Menu">
-  <span>Search</span> <kbd>⌘K</kbd>
-</button> -->
-<!-- Toast Notification Container (Place before </body>) -->
-<div id="toast-container" class="toast-container" aria-live="assertive"></div>
-<!-- Command Palette Modal Backdrop -->
-<div id="cmd-palette-backdrop" class="cmd-backdrop" aria-hidden="true">
-  <div class="cmd-modal glass-panel" role="dialog" aria-modal="true" aria-label="Command Menu">
-    
-    <!-- Search Bar -->
-    <div class="cmd-input-wrapper">
-      <span class="cmd-search-icon">🔍</span>
-      <input 
-        type="text" 
-        id="cmd-input" 
-        placeholder="Type a command or jump to section..." 
-        autocomplete="off" 
-        spellcheck="false"
-      >
-      <kbd class="cmd-esc-badge">ESC</kbd>
-    </div>
 
-    <!-- Dynamic Actions List -->
-    <div class="cmd-results" id="cmd-results" role="listbox">
-      <!-- Injected via JavaScript -->
-    </div>
+  <!-- Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="assertive"></div>
 
-    <!-- Footer Shortcuts -->
-    <div class="cmd-footer">
-      <div class="cmd-hint"><kbd>↑</kbd> <kbd>↓</kbd> to navigate</div>
-      <div class="cmd-hint"><kbd>↵</kbd> to select</div>
-      <div class="cmd-hint"><kbd>esc</kbd> to close</div>
+  <!-- Command Palette Modal -->
+  <div id="cmd-palette-backdrop" class="cmd-backdrop" aria-hidden="true">
+    <div class="cmd-modal glass-panel" role="dialog" aria-modal="true" aria-label="Command Menu">
+      <div class="cmd-input-wrapper">
+        <span class="cmd-search-icon">🔍</span>
+        <input type="text" id="cmd-input" placeholder="Type a command or jump to section..." autocomplete="off" spellcheck="false">
+        <kbd class="cmd-esc-badge">ESC</kbd>
+      </div>
+      <div class="cmd-results" id="cmd-results" role="listbox"></div>
+      <div class="cmd-footer">
+        <div class="cmd-hint"><kbd>↑</kbd> <kbd>↓</kbd> to navigate</div>
+        <div class="cmd-hint"><kbd>↵</kbd> to select</div>
+        <div class="cmd-hint"><kbd>esc</kbd> to close</div>
+      </div>
     </div>
-
   </div>
-</div>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Aditya Singh. Designed with precision & warm aesthetics.</p>
